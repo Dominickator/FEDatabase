@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import LoginPage from './pages/login';
 import WeaponsPage from './pages/weapons';
 import NavbarPage from './pages/navbar';

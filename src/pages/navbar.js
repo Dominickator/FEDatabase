@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <>
       <nav className={styles.nav}>
-        <a className={styles.siteTitle}>Fire Emblem Weapons</a>
+        <h1 className={styles.siteTitle}>Fire Emblem Weapons</h1>
         <ul>
           <li>
             <button onClick={() => navigate('/weapons')}>Weapons</button>
@@ -27,4 +27,4 @@ const Navbar = () => {
   );
 }
 
-export default Navbar;
+export default Navbar; 
