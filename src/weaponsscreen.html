@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fire Emblem Weapons</title>
+    <style>
+        body {
+            font-family: 'Roboto', Arial, Helvetica, sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+
+        .container {
+            margin: auto;
+            width: 900px;
+            padding: 30px;
+            background-color: #222222;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .container h1 {
+            text-align: center;
+            font-size: 28px;
+            font-weight: 500;
+            margin-bottom: 40px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        table th,
+        table td {
+            border: 2px solid #444444;
+            padding: 10px;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #333333;
+            font-weight: bold;
+        }
+
+        table td {
+            background-color: #2a2a2a;
+        }
+
+        .button {
+            background-color: #50a3ff;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-right: 10px;
+            transition: 0.2s;
+        }
+
+        .button:hover {
+            background-color: #3a84d6;
+        }
+
+        .add-weapon-form {
+            margin-bottom: 20px;
+        }
+
+        .add-weapon-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .add-weapon-form input[type="text"] {
+            display: block;
+            width: 100%;
+            background-color: #333333;
+            border: 2px solid #444444;
+            border-radius: 10px;
+            color: #ffffff;
+            padding: 12px;
+            font-size: 16px;
+            outline: none;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        .add-weapon-form input[type="text"]:focus {
+            border-color: #50a3ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Fire Emblem Weapons</h1>
+        <form class="add-weapon-form">
+            <label for="weapon-name">Weapon Name:</label>
+            <input type="text" id="weapon-name" name="weapon-name" required>
+            <label for="weapon-type">Game Name:</label>
+            <input type="text" id="weapon-type" name="weapon-type" required>
+            <label for="gameNumber">Game Number:</label>
+            <input type="text" id="gameNumber" name="gameNumber" required>
+            <label for="might">Might:</label>
+            <input type="text" id="might" name="might" required>
+            <label for="effect">Effect:</label>
+            <input type="text" id="effect" name="effect" required>
+            <label for="critRate">Crit Hit Rate:</label>
+            <input type="text" id="critRate" name="critRate" required>
+            <labelfor="weight">Weight:</label>
+                <input type="text" id="weight" name="weight" required>
+                <label for="durability">Durability:</label>
+                <input type="text" id="durability" name="durability" required>
+                <button class="button" type="submit">Add Weapon</button>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Game Name</th>
+                    <th>Game Number</th>
+                    <th>Might</th>
+                    <th>Effect</th>
+                    <th>Crit Rate</th>
+                    <th>Weight</th>
+                    <th>Durability</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Example</td>
+                    <td>FE 1</td>
+                    <td>1</td>
+                    <td>100</td>
+                    <td>First Class</td>
+                    <td>80%</td>
+                    <td>10 lbs</td>
+                    <td>100</td>
+                    <td>
+                        <button class="button">Remove</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="button" id="remove-all-weapons">Remove All Weapons</button>
+    </div>
+
+</body>
+
+</html>
