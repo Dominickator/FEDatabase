@@ -10,16 +10,13 @@ const Navbar = () => {
         <h1 className={styles.siteTitle}>Fire Emblem Weapons</h1>
         <ul>
           <li>
-            <button onClick={() => navigate('/weapons')}>Weapons</button>
+            <button onClick={() => navigate('/')}>Weapons</button>
           </li>
           <li>
-            <button onClick={() => navigate('/modify')}>Modify</button>
+            <button onClick={() => navigate('/calc')}>Damage Calculator</button>
           </li>
           <li>
             <button onClick={() => navigate('/search')}>Search</button>
-          </li>
-          <li>
-            <button onClick={() => navigate('/')}>Logout</button>
           </li>
         </ul>
       </nav>

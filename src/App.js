@@ -1,18 +1,16 @@
 import React from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
-import LoginPage from './pages/login';
 import WeaponsPage from './pages/weapons';
 import NavbarPage from './pages/navbar';
-import ModifyPage from './pages/modify';
+import CalcPage from './pages/calc';
 import { SearchPage } from './pages/search';
 
 const MainLayout = ({ children }) => {
   const location = useLocation();
-  const isLoginPage = location.pathname === '/';
 
   return (
     <>
-      {!isLoginPage && <NavbarPage />}
+      {<NavbarPage />}
       {children}
     </>
   );
@@ -25,10 +23,9 @@ function App() {
     <>
       <MainLayout>
         <Routes>
-            <Route path="/" element={<LoginPage />} />
-            <Route path="/weapons" element={<WeaponsPage />} />
+            <Route path="/" element={<WeaponsPage />} />
             <Route path="/navbar" element={< NavbarPage />} />
-            <Route path="/modify" element={<ModifyPage />} />
+            <Route path="/calc" element={<CalcPage />} />
             <Route path="/search" element={<SearchPage />} />
         </Routes>
       </MainLayout>

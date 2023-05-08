@@ -1,0 +1,43 @@
+Copy and Paste these commands into the terminal directed at this location, if you don't know how to point the command prompt to this folder copy and paste these next lines one at a time:
+
+cd %HOMEPATH%
+cd Downloads
+cd FEDatabase
+cd FEDatabase (This is only needed if the folder is inside the originally extracted folder.)
+
+You will then run the next command in order to download the node.js installer:
+powershell -NoExit -ExecutionPolicy Bypass -File install.ps1
+
+Close the current command prompt you are in and install the "node.msi" installer, which will install node.js.
+
+After that open another terminal pointed to the root directory of the FEDatabase folder, if you need them, the commands will be below (remember one at a time):
+
+cd %HOMEPATH%
+cd Downloads
+cd FEDatabase
+cd FEDatabase (This is only needed if the folder is inside the originally extracted folder.)
+
+If you have not installed it already, you must install the sql server, this app assumes that you have a username and password that are both "admin" for SQL and that your SQL hostname is called "localhost".
+You can install SQL server with the MySQL installer found here: https://dev.mysql.com/downloads/installer/
+	- To set up the MySQL installer, run the .msi file
+	- Enter 'admin' for username and password, as that is what this app is checking for
+	- Make sure you are called 'localhost', it is called this by default
+	- Don't change any default connection settings, it should be port 3306
+You should also run the included .sql file to create the tables.
+Start the SQL Server.
+
+Next, in the current command prompt, run "npm -v", if you get some numbers, it is installed, if you get an error, reinstall the node.msi installer.
+Once it is all installed, copy and paste these next commands one at a time, they will install all dependencies needed by the app, start the app, and start node.
+
+powershell -NoExit -ExecutionPolicy Bypass -File installDependencies.ps1
+
+Start these two in seperate command prompt windows as they need to run at the same time.
+
+powershell -NoExit -ExecutionPolicy Bypass -File startApp.ps1
+
+*NOTE THIS APP MUST BE RUN IN CHROMIUM BROWSERS (EDGE, CHROME) FOR BEST COMPATIBILITY, IF YOU HAVE STARTED THIS IN FIREFOX, GO TO A CHROMIUM BROWSER AND GO TO localhost:3000*
+
+powershell -NoExit -ExecutionPolicy Bypass -File startNode.ps1
+
+*If you get an error about upgrading MySQL, run this command: ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password', if that does not work, remove the @'localhost', replace the 'password' and 'root' with your password and username respectively*
+

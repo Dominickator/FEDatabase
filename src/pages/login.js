@@ -2,6 +2,16 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './login.module.css'
 
+
+const HandleLogin = (username, password) => {
+    
+    if(username === 'admin' && password === 'admin'){
+        return true;
+    } else{
+        return false;
+    }
+};
+
 const LoginPage = () => {
     let navigate = useNavigate();
     return (
@@ -20,7 +30,7 @@ const LoginPage = () => {
                             <input type="password" placeholder="Password" id="password" name="password" className={styles.inputField} required></input>
                         </div>
                         <div className={styles.formGroup}>
-                            <button className={styles.button} onClick={() => navigate('weapons')} type="submit">Login</button>
+                            <button className={styles.button} onClick={() => HandleLogin(document.getElementById('username'), document.getElementById('password')) ? navigate('weapons') : alert('Username or Password incorrect, please try again.')} type="submit">Login</button>
                         </div>
                         <div className={styles.errorMessage}>
                         </div>
